@@ -27,11 +27,9 @@
 Portable Windows installer for **VNCCS - Visual Novel Character Creation Suite** on **ComfyUI**.
 
 [VNCCS GitHub](https://github.com/AHEKOT/ComfyUI_VNCCS) |
-[VNCCS Utils GitHub](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) |
-[Discord](https://discord.com/invite/9Dacp4wvQw) |
-[Buy Me a Coffee](https://www.buymeacoffee.com/MIUProject)
-
+[VNCCS Utils GitHub](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) 
 </div>
+
 
 ## What This Is
 
@@ -40,6 +38,25 @@ VNCCS Easy Install is a ready-to-run ComfyUI package focused on one job: getting
 VNCCS is not just another workflow for creating a single consistent image. It is a full visual novel character creation system: create a character, clone an existing character, design clothing, generate emotion sets, manage poses, produce sprites, and keep the results organized in a reusable character library.
 
 The package combines a portable ComfyUI setup with the VNCCS workflows, model helpers, and companion nodes needed for character production.
+
+---
+
+<table>
+<tr>
+<td width="50%" align="center">
+<strong>Join The Community</strong><br>
+Share results, ask questions, and follow VNCCS updates.<br><br>
+<a href="https://discord.com/invite/9Dacp4wvQw" target="_blank"><img src="https://img.shields.io/badge/Join%20our%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" height="60" alt="Join our Discord"></a>
+</td>
+<td width="50%" align="center">
+<strong>Support VNCCS</strong><br>
+VNCCS is developed independently. Support helps keep the project moving.<br><br>
+<a href="https://www.buymeacoffee.com/MIUProject" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" width="217" alt="Buy Me A Coffee"></a>
+</td>
+</tr>
+</table>
+
+---
 
 ## Why VNCCS
 
@@ -137,18 +154,6 @@ Additional helper tools are included for setup and maintenance:
 - Update Easy-Install for refreshing helper files.
 
 Optional add-ons such as Nunchaku, SageAttention, FlashAttention, InsightFace, and Trellis are available for users who need them.
-
-## Community And Support
-
-Join the VNCCS community:
-
-[![Join Discord](https://img.shields.io/badge/Discord-Join%20VNCCS-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/9Dacp4wvQw)
-
-Support VNCCS development:
-
-[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/MIUProject)
-
-VNCCS is maintained as an independent project. Support helps keep the character pipeline, Pose Studio, model tooling, and documentation moving forward.
 
 ## VNCCS Repositories
 

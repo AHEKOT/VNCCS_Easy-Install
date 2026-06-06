@@ -27,9 +27,7 @@
 Портативный Windows-установщик **VNCCS - Visual Novel Character Creation Suite** для **ComfyUI**.
 
 [GitHub VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS) |
-[GitHub VNCCS Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) |
-[Discord](https://discord.com/invite/9Dacp4wvQw) |
-[Buy Me a Coffee](https://www.buymeacoffee.com/MIUProject)
+[GitHub VNCCS Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils)
 
 </div>
 
