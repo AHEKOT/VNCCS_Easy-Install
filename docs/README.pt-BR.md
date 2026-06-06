@@ -1,125 +1,55 @@
 <p align="center">
-🌍 
-<a href="../README.md#english">English</a> |
-<a href="README.zh-CN.md#zh-cn">简体中文</a> |
-<a href="README.ja.md#ja">日本語</a> |
-<a href="README.ko.md#ko">한국어</a> |
-<a href="README.es.md#es">Español</a> |
-<strong>Português</strong> |
-<a href="README.de.md#de">Deutsch</a> |
-<a href="README.fr.md#fr">Français</a> |
-<a href="README.ru.md#ru">Русский</a> |
-<a href="README.tr.md#de">Türkçe</a> |
-<a href="README.vi.md#vi">Tiếng Việt</a>
+  <img src="VNCCS_LOGO.png" alt="VNCCS" width="360">
 </p>
 
----
+# VNCCS Easy Install
 
-<div align="center">
+[English](../README.md#vnccs-easy-install) | [Русский](README.ru.md#vnccs-easy-install)
 
-# ComfyUI-Easy-Install
-Instalador portátil de **ComfyUI** com um clique para **Windows** 🔹 GPUs Nvidia  
-[![GitHub Release](https://img.shields.io/github/v/release/Tavris1/ComfyUI-Easy-Install)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases/latest/download/ComfyUI-Easy-Install.zip)
-[![GitHub Release Date](https://img.shields.io/github/release-date/Tavris1/ComfyUI-Easy-Install?style=flat)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
-[![GitHub All Releases](https://img.shields.io/github/downloads/Tavris1/ComfyUI-Easy-Install/total.svg)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
-[![GitHub Downloads Latest](https://img.shields.io/github/downloads/Tavris1/ComfyUI-Easy-Install/latest/total?style=flat&label=⬇+latest&color=orange)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases/latest/download/ComfyUI-Easy-Install.zip)
+Portable Windows installer for **VNCCS - Visual Novel Character Creation Suite** on **ComfyUI**.
 
-Dedicado à equipe **Pixaroma**  
-[![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FgggpkVgBf3%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&logo=discord&logoColor=white&label=Join%20Pixaroma%20Discord&color=FFDF00&suffix=%20users)](https://discord.com/invite/gggpkVgBf3)
+VNCCS is a complete pipeline for visual novel character production: create or clone a character, design outfits, generate emotion sets, manage poses, and produce organized sprite-ready results.
 
-![ComfyUI Screenshot](ComfyUI-ivo.jpg)
+## VNCCS Links
 
-ComfyUI-Easy-Install é um **ComfyUI portátil totalmente configurado** com apenas um clique. Não é necessário configurar Python ou dependências manualmente.
-A nova versão Desktop combina flexibilidade portátil com o conforto de um aplicativo Desktop tradicional.
+- Main node: [AHEKOT/ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS)
+- Utility nodes: [AHEKOT/ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils)
+- Discord: [VNCCS community](https://discord.com/invite/9Dacp4wvQw)
+- Support VNCCS: [Buy Me a Coffee](https://www.buymeacoffee.com/MIUProject)
 
-</div>
+## Included VNCCS Stack
 
-## 📦 Componentes incluídos
-<details>
-<summary><b>Componentes principais</b></summary>
+- `ComfyUI_VNCCS`
+- `ComfyUI_VNCCS_Utils`
+- `ComfyUI-GGUF`
+- `ComfyUI-Impact-Pack`
+- `ComfyUI-SeedVR2_VideoUpscaler`
+- `ComfyUI-Easy-Sam3`
+- `quick-connections`
+- `ComfyUI Manager`
 
-| 🔧 Componente | 📝 Nota |
-|---|---|
-| [Git](https://git-scm.com/) | ![Git version](https://img.shields.io/github/v/tag/git/git?label=&display_name=tag&color=blue) - Última (será instalado/atualizado se necessário) |
-| [Python](https://www.python.org/downloads/release/python-31210/) | ![Python version](https://img.shields.io/badge/3.12.10-blue) - Versão embutida |
-| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | ![ComfyUI version](https://img.shields.io/github/v/release/Comfy-Org/ComfyUI?label=&display_name=tag) - Última versão |
+## Start Here
 
-</details>
+Run `ComfyUI-Easy-Install.bat`, then open the VNCCS workflows in ComfyUI:
 
-<details>
-<summary><b>Nós dos tutoriais Pixaroma</b></summary>
+- `VNCCS_3.0_Step1_CharacterCreator.json`
+- `VNCCS_3.0_Step1_CharacterCloner.json`
+- `VNCCS_3.0_Step2_CharacterClothes.json`
+- `VNCCS_3.0_Step3_CharacterEmotions.json`
+- `VNCCS_MigrationAssistent.json`
 
-| 🖼️ Imagem | 🎬 Vídeo | 🎵 Áudio | 🧩 Utilitário / WF | 🤖 Modelos |
-|---|---|---|---|---|
-| [Tiled Diffusion & VAE](https://github.com/shiimizu/ComfyUI-TiledDiffusion) | [VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) | [MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer) | [ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager) | [QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) |
-| [Inpaint CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch) | [WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) | [Qwen3-TTS](https://github.com/flybirdxx/ComfyUI-Qwen-TTS) | [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use) | [GGUF](https://github.com/city96/ComfyUI-GGUF) |
-| [ControlNet Aux](https://github.com/Fannovel16/comfyui_controlnet_aux) | [WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) | [FishAudioS2](https://github.com/Saganaki22/ComfyUI-FishAudioS2) | [KJNodes](https://github.com/kijai/ComfyUI-KJNodes) | |
-| [LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) | [SeedVR2 VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | | [rgthree](https://github.com/rgthree/rgthree-comfy) | |
-| [RMBG](https://github.com/1038lab/ComfyUI-RMBG) | | | [iTools](https://github.com/MohammadAboulEla/ComfyUI-iTools) | |
-| [Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3) | | | [ControlAltAI Nodes](https://github.com/gseth/ControlAltAI-Nodes) | |
-| [SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | | | ✨[Pixaroma](https://github.com/pixaroma/ComfyUI-Pixaroma) | |
+Characters are saved under:
 
-</details>
+```text
+ComfyUI/output/VNCCS/Characters/YOUR_CHARACTER_NAME
+```
 
-<details>
-<summary><b>Nós e ferramentas opcionais</b></summary>
+For the full documentation, read [README.md](../README.md) or [README.ru.md](README.ru.md).
 
-| 🧩 Nós | 🛠️ Ferramentas |
-|---|---|
-| [Nunchaku](https://github.com/nunchaku-ai/nunchaku) | Easy-Models-Linker |
-| [SageAttention (v2.2.0 and v3)](https://github.com/woct0rdho/SageAttention) | Easy-System-Checker |
-| [FlashAttention](https://github.com/Dao-AILab/flash-attention) | ComfyUI-Version-Switcher |
-| [InsightFace](https://github.com/deepinsight/insightface) | Easy-model2GGUF |
-| [Trellis 2.0](https://github.com/visualbruno/ComfyUI-Trellis2) | Long-Paths-Enabler |
-| | Torch-Pack |
-| | Toggle-DynamicVRAM |
-| | Update Easy-Install |
+## Credits
 
-</details>
+This build is based on **ComfyUI-Easy-Install** by **Tavris1 / ivo**.
 
----
-
-## 🖥️ Instalação no Windows
-1. [**▶️ CLIQUE AQUI ◀️**](https://github.com/Tavris1/ComfyUI-Easy-Install/releases/latest/download/ComfyUI-Easy-Install.zip) para baixar a versão mais recente
-2. Extraia o arquivo ZIP em uma nova pasta e execute **`ComfyUI-Easy-Install.bat`**
-3. Após a configuração, você pode instalar ou executar componentes pela pasta **Add-ons** ou pelo **EZi Desktop Menu**:
-    - **Easy-Models-Linker** - *Usa a pasta **MODELS** existente via **extra_model_paths.yaml**, sem necessidade de novo download*
-      - *Algumas pastas como **LLM** e **llm_gguf** não podem ser redirecionadas assim*
-    - **Easy-System-Checker** - *Fornece informações sobre os principais componentes de hardware e software*
-    - **Nunchaku** - *Instala Nunchaku (se houver problemas, execute `Nunchaku.bat` novamente)*
-    - **SageAttention-Multi** - *Instala SageAttention v2.2.0 e v3 (v3 somente para GPUs NVIDIA série 50)*
-    - **FlashAttention** - *Instala FlashAttention v2.8.3*
-    - **InsightFace** - *Instala InsightFace (modelos pré-treinados apenas para pesquisa não comercial)*
-    - **Trellis2** - *Instala Trellis 2.0 e o modelo (requer `Torch 2.8.0+cu128` da pasta `Add-ons/Torch-Pack`)*
-    - **Torch-Pack** - *Alterna rapidamente entre `Torch 2.7.1+cu128`, `Torch 2.8.0+cu128` e `Torch 2.9.1+cu130`*
-    - **Easy-model2GGUF** - *Converte e quantiza modelos para GGUF (Q2_K–Q8_0), aplica correções 5D se disponíveis*
-    - **Long-Paths-Enabler** - *Habilita **Long Paths** no Windows 10/11. Essencial para Python/ComfyUI*
-    - **ComfyUI-Version-Switcher** - ***Reversível** para voltar a uma versão anterior do ComfyUI se houver problemas*
-    - **Toggle-DynamicVRAM** - *Alterna a opção **--disable-dynamic-vram** nos arquivos de inicialização do ComfyUI*
-    - **Update Easy-Install** - *Atualiza **Add-ons** e outras pastas, cria atalhos na área de trabalho*
-    - **EZi Desktop Themes** - *via EZi Desktop Menu > Advanced*
-    - **Custom Input, Output & User folders** - *via EZi Desktop Menu > Advanced*
-    - **ComfyUI and Frontend versions changer** - *via EZi Desktop Menu > Advanced*
-> [!IMPORTANT]
-> - Não execute o instalador como **Administrador**.
-> - Evite pastas do sistema (`Program Files`, `Windows`, raiz `C:\`).
-> - Evite espaços e caracteres especiais em nomes de pastas.
-> - Certifique-se de que os drivers NVIDIA estejam atualizados.
-
-> [!TIP]
-> - Múltiplas instalações de ComfyUI são permitidas sem conflitos.
-> - Você pode renomear/mover a pasta `ComfyUI-Easy-Install` após a instalação.
-> - [**Para macOS / Linux clique aqui**](https://github.com/Tavris1/ComfyUI-Easy-Install/tree/MAC-Linux)
-
-
-<div align="center">
-
-## ❤️ Apoie-me
-
-Gostou dos meus projetos? Qualquer apoio é muito apreciado!
-
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/tavris1)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/tavris1)
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/Tavris1)
-
-</div>
+- Original repository: [Tavris1/ComfyUI-Easy-Install](https://github.com/Tavris1/ComfyUI-Easy-Install)
+- Releases: [ComfyUI-Easy-Install releases](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
+- Support original installer creator: [PayPal](https://paypal.me/tavris1), [Buy Me a Coffee](https://buymeacoffee.com/tavris1), [GitHub Sponsors](https://github.com/sponsors/Tavris1)

@@ -1,138 +1,175 @@
+
 <p align="center">
-🌍 
 <strong>English</strong> |
-<a href="docs/README.zh-CN.md#zh-cn">简体中文</a> |
-<a href="docs/README.ja.md#ja">日本語</a> |
-<a href="docs/README.ko.md#ko">한국어</a> |
-<a href="docs/README.es.md#es">Español</a> |
-<a href="docs/README.pt-BR.md#pt-br">Português</a> |
-<a href="docs/README.de.md#de">Deutsch</a> |
-<a href="docs/README.fr.md#fr">Français</a> |
 <a href="docs/README.ru.md#ru">Русский</a> |
-<a href="docs/README.tr.md#tr">Türkçe</a> |
-<a href="docs/README.vi.md#vi">Tiếng Việt</a>
+<a href="docs/README.zh-CN.md#vnccs-easy-install">简体中文</a> |
+<a href="docs/README.ja.md#vnccs-easy-install">日本語</a> |
+<a href="docs/README.ko.md#vnccs-easy-install">한국어</a> |
+<a href="docs/README.es.md#vnccs-easy-install">Español</a> |
+<a href="docs/README.pt-BR.md#vnccs-easy-install">Português</a> |
+<a href="docs/README.de.md#vnccs-easy-install">Deutsch</a> |
+<a href="docs/README.fr.md#vnccs-easy-install">Français</a> |
+<a href="docs/README.tr.md#vnccs-easy-install">Türkçe</a> |
+<a href="docs/README.vi.md#vnccs-easy-install">Tiếng Việt</a>
 </p>
 
 ---
 
+<p align="center">
+  <img src="docs/VNCCS_LOGO.png" alt="VNCCS" width="360">
+</p>
+
+
 <div align="center">
 
-# ComfyUI-Easy-Install
-One-click Portable **ComfyUI** installer for **Windows** with EZi Desktop app 🔹 Nvidia GPUs  
-[![GitHub Release](https://img.shields.io/github/v/release/Tavris1/ComfyUI-Easy-Install)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases/latest/download/ComfyUI-Easy-Install.zip)
-[![GitHub Release Date](https://img.shields.io/github/release-date/Tavris1/ComfyUI-Easy-Install?style=flat)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
-[![GitHub All Releases](https://img.shields.io/github/downloads/Tavris1/ComfyUI-Easy-Install/total.svg)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
-[![GitHub Downloads Latest](https://img.shields.io/github/downloads/Tavris1/ComfyUI-Easy-Install/latest/total?style=flat&label=⬇+latest&color=orange)](https://github.com/Tavris1/ComfyUI-Easy-Install/releases/latest/download/ComfyUI-Easy-Install.zip)
+# VNCCS Easy Install
 
-Dedicated to the **Pixaroma** team  
-[![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FgggpkVgBf3%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&logo=discord&logoColor=white&label=Join%20Pixaroma%20Discord&color=FFDF00&suffix=%20users)](https://discord.com/invite/gggpkVgBf3)
+Portable Windows installer for **VNCCS - Visual Novel Character Creation Suite** on **ComfyUI**.
 
-![ComfyUI Screenshot](docs/ComfyUI-ivo.jpg)
+[VNCCS GitHub](https://github.com/AHEKOT/ComfyUI_VNCCS) |
+[VNCCS Utils GitHub](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) |
+[Discord](https://discord.com/invite/9Dacp4wvQw) |
+[Buy Me a Coffee](https://www.buymeacoffee.com/MIUProject)
 
 </div>
 
-## 🌟 Features
-ComfyUI-Easy-Install is a ***complete portable ComfyUI & dependency management system***  
-that runs through its own dedicated ***EZi Desktop app*** or via any web browser with a one-click setup.  
-No Python or Git setup required, and absolutely no manual dependencies.  
+## What This Is
 
-With the built-in app, you can install complex packages like Nunchaku, SageAttention (v2/v3),  
-FlashAttention, InsightFace, and Trellis 2.0 automatically in one click, without any compilation errors.  
+VNCCS Easy Install is a ready-to-run ComfyUI package focused on one job: getting you into the VNCCS character production pipeline with as little setup friction as possible.
 
-The ***advanced management tools*** let you link existing model folders, toggle Dynamic VRAM,  
-freeze package versions (like NumPy==1.26.4), switch PyTorch/CUDA versions on the fly,  
-roll back ComfyUI & frontend versions, clean UV/PIP cache, convert models to GGUF, and much more.
+VNCCS is not just another workflow for creating a single consistent image. It is a full visual novel character creation system: create a character, clone an existing character, design clothing, generate emotion sets, manage poses, produce sprites, and keep the results organized in a reusable character library.
 
-## 📦 Included Components
-<details>
-<summary><b>Core Components</b></summary>
+This fork keeps the useful portable Windows foundation of ComfyUI-Easy-Install, but the default installed nodes, documentation, and entrypoint are tuned for VNCCS.
 
-| 🔧 Component | 📝 Note |
+## Why VNCCS
+
+- A complete character pipeline instead of scattered one-off workflows.
+- Consistent character generation across base sheets, outfits, emotions, poses, and final sprites.
+- VNCCS Control Center for downloading and selecting the required Qwen Image Edit 2511 models, LoRAs, VAE, text encoder, and upscaler files.
+- VNCCS Pose Studio: an interactive 3D posing, framing, lighting, and pose-library environment directly inside ComfyUI.
+- Character Cloner for building a VNCCS character from existing reference images.
+- Clothes Designer for creating and cloning outfits while keeping character identity.
+- Emotion Studio for producing sprite-ready emotion variations.
+- Model Manager and Selector utilities for managing LoRAs and checkpoints from HuggingFace or Civitai-backed repositories.
+
+VNCCS saves characters under:
+
+```text
+ComfyUI/output/VNCCS/Characters/YOUR_CHARACTER_NAME
+```
+
+Back this folder up regularly. It is your character library.
+
+## Included Core Components
+
+| Component | Purpose |
 |---|---|
-| [Git](https://git-scm.com/) | ![Git version](https://img.shields.io/github/v/tag/git/git?label=&display_name=tag&color=blue) - Latest (will install/update if needed) |
-| [Python](https://www.python.org/downloads/release/python-31210/) | ![Python version](https://img.shields.io/badge/3.12.10-blue) - Embedded version |
-| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | ![ComfyUI version](https://img.shields.io/github/v/release/Comfy-Org/ComfyUI?label=&display_name=tag) - Latest version |
+| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | The node-based generation environment |
+| [ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager) | Node management and update support |
+| Embedded Python 3.12.10 | Portable Python runtime |
+| Git | Repository installation and updates |
+| EZi Desktop helper | Launching, updating, folder shortcuts, and installer tools |
 
-</details>
+## Installed VNCCS Nodes
 
-<details>
-<summary><b>Nodes from Pixaroma tutorials</b></summary>
-
-| 🖼️ Image | 🎬 Video | 🎵 Audio | 🧩 Utility / WF | 🤖 Models |
-|---|---|---|---|---|
-| [Tiled Diffusion & VAE](https://github.com/shiimizu/ComfyUI-TiledDiffusion) | [VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) | [MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer) | [ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager) | [QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) |
-| [Inpaint CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch) | [WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) | [Qwen3-TTS](https://github.com/flybirdxx/ComfyUI-Qwen-TTS) | [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use) | [GGUF](https://github.com/city96/ComfyUI-GGUF) |
-| [ControlNet Aux](https://github.com/Fannovel16/comfyui_controlnet_aux) | [WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) | [FishAudioS2](https://github.com/Saganaki22/ComfyUI-FishAudioS2) | [KJNodes](https://github.com/kijai/ComfyUI-KJNodes) | |
-| [LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) | [SeedVR2 VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | | [rgthree](https://github.com/rgthree/rgthree-comfy) | |
-| [RMBG](https://github.com/1038lab/ComfyUI-RMBG) | | | [iTools](https://github.com/MohammadAboulEla/ComfyUI-iTools) | |
-| [Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3) | | | [ControlAltAI Nodes](https://github.com/gseth/ControlAltAI-Nodes) | |
-| [SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose) | | | ✨[Pixaroma](https://github.com/pixaroma/ComfyUI-Pixaroma) | |
-
-</details>
-
-<details>
-<summary><b>Optional Add-ons Nodes and Tools</b></summary>
-
-| 🧩 Nodes | 🛠️ Tools |
+| Node package | Why it is included |
 |---|---|
-| [Nunchaku](https://github.com/nunchaku-ai/nunchaku) | Easy-Models-Linker |
-| [SageAttention (v2.2.0 and v3)](https://github.com/woct0rdho/SageAttention) | Easy-System-Checker |
-| [FlashAttention](https://github.com/Dao-AILab/flash-attention) | ComfyUI-Version-Switcher |
-| [InsightFace](https://github.com/deepinsight/insightface) | Easy-model2GGUF |
-| [Trellis 2.0](https://github.com/visualbruno/ComfyUI-Trellis2) | Long-Paths-Enabler |
-| | Torch-Pack |
-| | Toggle-DynamicVRAM |
-| | Update Easy-Install |
+| [ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS) installed as `vnccs` | Main Visual Novel Character Creation Suite |
+| [ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) installed as `vnccs-utils` | Pose Studio, Visual Camera Control, QWEN Detailer, Model Manager, Model Selector |
+| [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) | Required by VNCCS Control Center for GGUF Qwen model loading |
+| [ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack) | Required for detector, SAM, and FaceDetailer paths used by VNCCS |
+| [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | Used by the default VNCCS upscaler mode |
+| [ComfyUI-Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3) | Used by clone-clothes preprocessing |
+| [quick-connections](https://github.com/niknah/quick-connections) | Convenience UI extension requested for this build |
 
-</details>
+The old broad Easy Install / Pixaroma tutorial node pack is intentionally not installed by default. This build keeps the node set focused on what VNCCS needs.
 
----
+## VNCCS Workflow Entry Points
 
-## 🖥️ Windows Installation
-1. [**▶️ CLICK HERE ◀️**](https://github.com/Tavris1/ComfyUI-Easy-Install/releases/latest/download/ComfyUI-Easy-Install.zip) to download the latest version
-2. Extract the ZIP file to a new folder and run **`ComfyUI-Easy-Install.bat`**
-3. After setup, you can install or run components from the **Add-ons** folder or via the **EZi Desktop Menu**:
-    - **Easy-Models-Linker** - *Uses existing **MODELS** folder via **extra_model_paths.yaml**, no re-download needed*
-      - *Some folders like **LLM** and **llm_gguf** cannot be redirected this way*
-    - **Easy-System-Checker** - *Provides information about key hardware and software components*
-    - **Nunchaku** - *Installs Nunchaku. (Start `Nunchaku.bat` again if issues occur later)*
-    - **SageAttention-Multi** - *Installs both SageAttention v2.2.0 and v3 (v3 effective only on NVIDIA 50-series GPUs)*
-    - **FlashAttention** - *Installs FlashAttention v2.8.3*
-    - **InsightFace** - *Installs InsightFace (Pretrained models for non-commercial research only)*
-    - **Trellis2** - *Installs Trellis 2.0 and the model (requires `Torch 2.8.0+cu128` from the `Add-ons/Torch-Pack`)*
-    - **Torch-Pack** - *Quick switching between: `Torch 2.7.1+cu128`, `Torch 2.8.0+cu128` and `Torch 2.9.1+cu130`*
-    - **Easy-model2GGUF** - *Convert & quantize models to GGUF (Q2_K–Q8_0) with 5D tensor fixes if available*
-    - **Long-Paths-Enabler** - *Enables **Long Paths** in Windows 10/11. Essential for Python/ComfyUI*
-    - **ComfyUI-Version-Switcher** - ***Reversible** rollback to a **previous** ComfyUI version in case of issues*
-    - **Toggle-DynamicVRAM** - *Toggles **--disable-dynamic-vram** option in ComfyUI startup files*
-    - **Update Easy-Install** - *Updates **Add-ons** and other folders. Creates desktop shortcuts*
-    - **EZi Desktop Themes** - *via EZi Desktop > Menu > Advanced*
-    - **Custom Input, Output & User folders** - *via EZi Desktop > Menu > Advanced*
-    - **ComfyUI and Frontend versions changer** - *via EZi Desktop > Menu > Advanced*
-    - **UV & PIP cache cleaner** - *via EZi Desktop > Menu*
-    - **ComfyUI-Manager Security-Level Config** - *Easy configuration of security_level via EZi Desktop > Menu*
-    - **Pinned-Packages-Manager** - *Freeze package versions such as NumPy==1.26.4 via EZi Desktop > Menu*
+Open the VNCCS workflows in ComfyUI after installation:
 
-> [!IMPORTANT]
-> - Do not run the installer as **Administrator**.
-> - Avoid system folders (`Program Files`, `Windows`, `C:\` root).
-> - Avoid spaces and special characters in folder names.
-> - Make sure your NVIDIA drivers are up to date.
+1. `VNCCS_3.0_Step1_CharacterCreator.json` - create a base character.
+2. `VNCCS_3.0_Step1_CharacterCloner.json` - clone a character from one or more references.
+3. `VNCCS_3.0_Step2_CharacterClothes.json` - create or clone outfits.
+4. `VNCCS_3.0_Step3_CharacterEmotions.json` - generate emotion sprites.
+5. `VNCCS_MigrationAssistent.json` - migrate characters from older VNCCS versions.
 
-> [!TIP]
-> - Multiple ComfyUI installs allowed without conflicts.
-> - You can rename/move `ComfyUI-Easy-Install` folder after installation.
-> - [**For macOS / Linux click here**](https://github.com/Tavris1/ComfyUI-Easy-Install/tree/MAC-Linux)
+The practical flow is:
 
+```text
+Create or clone character -> Generate clothes -> Generate emotions -> Use sprites in your visual novel
+```
 
-<div align="center">
+## Models
 
-## ❤️ Support Me
+VNCCS 3.0 uses **VNCCS Control Center**. Open a VNCCS workflow and use **Download ALL** to place the main models into the correct ComfyUI folders.
 
-Enjoy my projects? Any support is greatly appreciated!
+The default generation path is Qwen Image Edit 2511 with GGUF model loading. Control Center currently manages:
+
+- Qwen Image Edit 2511 GGUF models: Q4, Q5, Q8.
+- QIE2511 text encoder and VAE.
+- Qwen Image Edit 2511 Lightning LoRA.
+- VNCCS Clothes Core LoRA.
+- VNCCS Emotion Core LoRA.
+- VNCCS Pose Studio LoRA.
+- 4x APISR upscaler.
+
+Character Cloner and the clothing wizard can also use Qwen2.5-VL helper GGUF files for image description. Their UI has dedicated download controls.
+
+## Windows Installation
+
+1. Download or extract this VNCCS Easy Install package into a new folder.
+2. Run `ComfyUI-Easy-Install.bat`.
+3. Do not run the installer as Administrator.
+4. Avoid system folders such as `Program Files`, `Windows`, or the root of `C:\`.
+5. Avoid spaces and special characters in the install path.
+6. Keep NVIDIA drivers up to date.
+
+After setup, launch ComfyUI with `Start ComfyUI.bat` or use the EZi Desktop launcher.
+
+## Useful Add-ons
+
+The package still contains selected Easy Install helper tools:
+
+- Easy-Models-Linker for using an existing models folder via `extra_model_paths.yaml`.
+- Easy-System-Checker for hardware and software checks.
+- ComfyUI-Version-Switcher for rollback testing.
+- Easy-model2GGUF for model conversion and quantization.
+- Long-Paths-Enabler for Windows long path support.
+- Torch-Pack for switching supported PyTorch/CUDA builds.
+- Update Easy-Install for refreshing helper files.
+
+Optional experimental add-ons such as Nunchaku, SageAttention, FlashAttention, InsightFace, and Trellis are still credited as inherited installer tooling, but they are not the default VNCCS path.
+
+## Community And Support
+
+Join the VNCCS community:
+
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20VNCCS-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/9Dacp4wvQw)
+
+Support VNCCS development:
+
+[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/MIUProject)
+
+VNCCS is maintained as an independent project. Support helps keep the character pipeline, Pose Studio, model tooling, and documentation moving forward.
+
+## VNCCS Repositories
+
+- Main node: [AHEKOT/ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS)
+- Utility nodes: [AHEKOT/ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils)
+
+## Credits To The Installer Foundation
+
+This project is based on **ComfyUI-Easy-Install** by **Tavris1 / ivo**. The original installer work made the portable Windows ComfyUI foundation, EZi Desktop helper, update scripts, add-on tools, and dependency-management flow possible.
+
+Original installer:
+
+- Repository: [Tavris1/ComfyUI-Easy-Install](https://github.com/Tavris1/ComfyUI-Easy-Install)
+- Releases: [ComfyUI-Easy-Install releases](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
+- macOS / Linux branch: [MAC-Linux](https://github.com/Tavris1/ComfyUI-Easy-Install/tree/MAC-Linux)
+
+Support the original installer creator:
 
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/tavris1)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/tavris1)
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/Tavris1)
-
-</div>
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=white)](https://github.com/sponsors/Tavris1)

@@ -107,30 +107,15 @@ if "%CURRENT_CUDA%"=="12.8" (
 .\python_embeded\python.exe -I -m uv pip install descript-audio-codec %UVargs%
 echo.
 
-:: Install Pixaroma's Related Nodes ::
-call :get_node https://github.com/Comfy-Org/ComfyUI-Manager					comfyui-manager
-call :get_node https://github.com/yolain/ComfyUI-Easy-Use					ComfyUI-Easy-Use
-call :get_node https://github.com/Fannovel16/comfyui_controlnet_aux			comfyui_controlnet_aux
-call :get_node https://github.com/rgthree/rgthree-comfy						rgthree-comfy
-call :get_node https://github.com/MohammadAboulEla/ComfyUI-iTools			comfyui-itools
-call :get_node https://github.com/city96/ComfyUI-GGUF						ComfyUI-GGUF
-call :get_node https://github.com/gseth/ControlAltAI-Nodes					controlaltai-nodes
-call :get_node https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch	comfyui-inpaint-cropandstitch
-call :get_node https://github.com/1038lab/ComfyUI-RMBG						comfyui-rmbg
-call :get_node https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite		comfyui-videohelpersuite
-call :get_node https://github.com/shiimizu/ComfyUI-TiledDiffusion			ComfyUI-TiledDiffusion
-call :get_node https://github.com/kijai/ComfyUI-KJNodes						comfyui-kjnodes
-call :get_node https://github.com/kijai/ComfyUI-WanVideoWrapper				ComfyUI-WanVideoWrapper
-call :get_node https://github.com/1038lab/ComfyUI-QwenVL					ComfyUI-QwenVL
-call :get_node https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler		seedvr2_videoupscaler
-call :get_node https://github.com/chflame163/ComfyUI_LayerStyle				comfyui_layerstyle
-call :get_node https://github.com/kijai/ComfyUI-WanAnimatePreprocess		ComfyUI-WanAnimatePreprocess
-call :get_node https://github.com/yolain/ComfyUI-Easy-Sam3					comfyui-easy-sam3
-call :get_node https://github.com/kijai/ComfyUI-SCAIL-Pose					ComfyUI-SCAIL-Pose
-call :get_node https://github.com/kijai/ComfyUI-MelBandRoFormer				ComfyUI-MelBandRoFormer
-call :get_node https://github.com/flybirdxx/ComfyUI-Qwen-TTS				qwen3-tts-comfyui
-call :get_node https://github.com/Saganaki22/ComfyUI-FishAudioS2			ComfyUI-fish-audio-s2
-call :get_node https://github.com/pixaroma/ComfyUI-Pixaroma					ComfyUI-Pixaroma
+:: Install required VNCCS nodes ::
+call :get_node https://github.com/Comfy-Org/ComfyUI-Manager               comfyui-manager
+call :get_node https://github.com/AHEKOT/ComfyUI_VNCCS                    vnccs
+call :get_node https://github.com/AHEKOT/ComfyUI_VNCCS_Utils              vnccs-utils
+call :get_node https://github.com/city96/ComfyUI-GGUF                     ComfyUI-GGUF
+call :get_node https://github.com/ltdrdata/ComfyUI-Impact-Pack            ComfyUI-Impact-Pack
+call :get_node https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler      seedvr2_videoupscaler
+call :get_node https://github.com/yolain/ComfyUI-Easy-Sam3                comfyui-easy-sam3
+call :get_node https://github.com/niknah/quick-connections                 quick-connections
 
 echo %green%::::::::::::::: %yellow%Installation/Updating SoX%green% :::::::::::::::%reset%
 echo.
