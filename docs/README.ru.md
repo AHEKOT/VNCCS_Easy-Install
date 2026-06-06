@@ -39,6 +39,25 @@ VNCCS - не просто workflow для одной картинки. Это п
 
 Сборка объединяет портативный ComfyUI, VNCCS workflow, загрузку моделей и нужные companion-ноды для производства персонажей.
 
+---
+
+<table>
+<tr>
+<td width="50%" align="center">
+<strong>Сообщество VNCCS</strong><br>
+Делись результатами, задавай вопросы и следи за обновлениями.<br><br>
+<a href="https://discord.com/invite/9Dacp4wvQw" target="_blank"><img src="VNCCS_Discord_Button.png" alt="Join our Discord"></a>
+</td>
+<td width="50%" align="center">
+<strong>Поддержать VNCCS</strong><br>
+VNCCS развивается независимо. Поддержка помогает продолжать работу над проектом.<br><br>
+<a href="https://www.buymeacoffee.com/MIUProject" target="_blank"><img src="VNCCS_Donate_Button.png" alt="Поддержать VNCCS"></a>
+</td>
+</tr>
+</table>
+
+---
+
 ## Сильные Стороны VNCCS
 
 - Полный цикл работы с персонажем вместо набора разрозненных workflow.
@@ -125,14 +144,6 @@ Character Cloner и clothing wizard также могут использоват
 - Long-Paths-Enabler для включения длинных путей Windows.
 - Torch-Pack для переключения поддерживаемых PyTorch/CUDA сборок.
 - Update Easy-Install для обновления helper-файлов.
-
-## Сообщество И Поддержка VNCCS
-
-[Discord VNCCS](https://discord.com/invite/9Dacp4wvQw)
-
-[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/MIUProject)
-
-VNCCS - независимый проект. Поддержка помогает развивать пайплайн персонажей, Pose Studio, инструменты моделей и документацию.
 
 ## Репозитории VNCCS
 

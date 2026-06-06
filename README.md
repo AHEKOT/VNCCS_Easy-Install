@@ -46,12 +46,12 @@ The package combines a portable ComfyUI setup with the VNCCS workflows, model he
 <td width="50%" align="center">
 <strong>Join The Community</strong><br>
 Share results, ask questions, and follow VNCCS updates.<br><br>
-<a href="https://discord.com/invite/9Dacp4wvQw" target="_blank"><img src="https://img.shields.io/badge/Join%20our%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" height="60" alt="Join our Discord"></a>
+<a href="https://discord.com/invite/9Dacp4wvQw" target="_blank"><img src="docs/VNCCS_Discord_Button.png" alt="Join our Discord"></a>
 </td>
 <td width="50%" align="center">
 <strong>Support VNCCS</strong><br>
 VNCCS is developed independently. Support helps keep the project moving.<br><br>
-<a href="https://www.buymeacoffee.com/MIUProject" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" width="217" alt="Buy Me A Coffee"></a>
+<a href="https://www.buymeacoffee.com/MIUProject" target="_blank"><img src="docs/VNCCS_Donate_Button.png" alt="Support VNCCS"></a>
 </td>
 </tr>
 </table>
