@@ -17,16 +17,11 @@ VNCCS is a complete pipeline for visual novel character production: create or cl
 - Discord: [VNCCS community](https://discord.com/invite/9Dacp4wvQw)
 - Support VNCCS: [Buy Me a Coffee](https://www.buymeacoffee.com/MIUProject)
 
-## Included VNCCS Stack
+## What You Get
 
-- `ComfyUI_VNCCS`
-- `ComfyUI_VNCCS_Utils`
-- `ComfyUI-GGUF`
-- `ComfyUI-Impact-Pack`
-- `ComfyUI-SeedVR2_VideoUpscaler`
-- `ComfyUI-Easy-Sam3`
-- `quick-connections`
-- `ComfyUI Manager`
+- VNCCS and VNCCS Utils for character creation, posing, model tools, and workflow support.
+- ComfyUI Manager and the ComfyUI nodes needed by the VNCCS workflows.
+- quick-connections for faster node linking inside ComfyUI.
 
 ## Start Here
 
@@ -48,7 +43,7 @@ For the full documentation, read [README.md](../README.md) or [README.ru.md](REA
 
 ## Credits
 
-This build is based on **ComfyUI-Easy-Install** by **Tavris1 / ivo**.
+Installer foundation by **ComfyUI-Easy-Install** from **Tavris1 / ivo**.
 
 - Original repository: [Tavris1/ComfyUI-Easy-Install](https://github.com/Tavris1/ComfyUI-Easy-Install)
 - Releases: [ComfyUI-Easy-Install releases](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)

@@ -39,7 +39,7 @@ VNCCS Easy Install - это готовая портативная сборка C
 
 VNCCS - не просто workflow для одной картинки. Это полный пайплайн создания персонажей для визуальных новелл и похожих проектов: базовый персонаж, клонирование референса, одежда, эмоции, позы, спрайты и организованная библиотека персонажей.
 
-Этот форк сохраняет удобную Windows-основу ComfyUI-Easy-Install, но дефолтные ноды, документация и точка входа теперь ориентированы на VNCCS.
+Сборка объединяет портативный ComfyUI, VNCCS workflow, загрузку моделей и нужные companion-ноды для производства персонажей.
 
 ## Сильные Стороны VNCCS
 
@@ -66,15 +66,13 @@ ComfyUI/output/VNCCS/Characters/YOUR_CHARACTER_NAME
 |---|---|
 | [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | Основная node-среда |
 | [ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager) | Управление нодами и обновлениями |
-| [ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS), ставится как `vnccs` | Основной Visual Novel Character Creation Suite |
-| [ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils), ставится как `vnccs-utils` | Pose Studio, Visual Camera Control, QWEN Detailer, Model Manager, Model Selector |
+| [ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS) | Основной Visual Novel Character Creation Suite |
+| [ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) | Pose Studio, Visual Camera Control, QWEN Detailer, Model Manager, Model Selector |
 | [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) | Загрузка GGUF Qwen-моделей для VNCCS Control Center |
-| [ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack) | Detector, SAM и FaceDetailer-пути, используемые VNCCS |
-| [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | Дефолтный режим апскейла VNCCS |
+| [ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack) | Detector, SAM и FaceDetailer для VNCCS workflow |
+| [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | Апскейл в VNCCS |
 | [ComfyUI-Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3) | Preprocessing для clone clothes |
 | [quick-connections](https://github.com/niknah/quick-connections) | Удобное расширение интерфейса для быстрых соединений |
-
-Старый широкий набор нод из дефолтного Easy Install / Pixaroma тут не ставится по умолчанию. Сборка оставляет только то, что нужно VNCCS и его рабочим сценариям.
 
 ## Основные Workflow
 
@@ -102,7 +100,6 @@ VNCCS 3.0 использует **VNCCS Control Center**. Открой любой
 - QIE2511 text encoder и VAE.
 - Qwen Image Edit 2511 Lightning LoRA.
 - VNCCS Clothes Core LoRA.
-- VNCCS Emotion Core LoRA.
 - VNCCS Pose Studio LoRA.
 - 4x APISR upscaler.
 
@@ -121,7 +118,7 @@ Character Cloner и clothing wizard также могут использоват
 
 ## Полезные Инструменты
 
-В сборке оставлены полезные инструменты Easy Install:
+Дополнительные инструменты для настройки и обслуживания:
 
 - Easy-Models-Linker для подключения существующей папки моделей через `extra_model_paths.yaml`.
 - Easy-System-Checker для проверки железа и окружения.
@@ -146,7 +143,7 @@ VNCCS - независимый проект. Поддержка помогает
 
 ## Credits: Оригинальный Инсталлер
 
-Этот проект основан на **ComfyUI-Easy-Install** от **Tavris1 / ivo**. Оригинальный инсталлер дал сборке портативную Windows-основу ComfyUI, EZi Desktop, update-скрипты, add-on инструменты и общий dependency-management flow.
+VNCCS Easy Install построен на **ComfyUI-Easy-Install** от **Tavris1 / ivo**. Спасибо оригинальному проекту за портативную Windows-основу ComfyUI, EZi Desktop, update-скрипты, add-on инструменты и общий dependency-management flow.
 
 - Репозиторий: [Tavris1/ComfyUI-Easy-Install](https://github.com/Tavris1/ComfyUI-Easy-Install)
 - Релизы: [ComfyUI-Easy-Install releases](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)

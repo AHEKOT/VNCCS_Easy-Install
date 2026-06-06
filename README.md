@@ -39,7 +39,7 @@ VNCCS Easy Install is a ready-to-run ComfyUI package focused on one job: getting
 
 VNCCS is not just another workflow for creating a single consistent image. It is a full visual novel character creation system: create a character, clone an existing character, design clothing, generate emotion sets, manage poses, produce sprites, and keep the results organized in a reusable character library.
 
-This fork keeps the useful portable Windows foundation of ComfyUI-Easy-Install, but the default installed nodes, documentation, and entrypoint are tuned for VNCCS.
+The package combines a portable ComfyUI setup with the VNCCS workflows, model helpers, and companion nodes needed for character production.
 
 ## Why VNCCS
 
@@ -67,22 +67,20 @@ Back this folder up regularly. It is your character library.
 | [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | The node-based generation environment |
 | [ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager) | Node management and update support |
 | Embedded Python 3.12.10 | Portable Python runtime |
-| Git | Repository installation and updates |
-| EZi Desktop helper | Launching, updating, folder shortcuts, and installer tools |
+| Git | Downloads and updates |
+| EZi Desktop helper | Launching ComfyUI and opening common tools |
 
-## Installed VNCCS Nodes
+## VNCCS Tools And Nodes
 
-| Node package | Why it is included |
+| Component | Role |
 |---|---|
-| [ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS) installed as `vnccs` | Main Visual Novel Character Creation Suite |
-| [ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) installed as `vnccs-utils` | Pose Studio, Visual Camera Control, QWEN Detailer, Model Manager, Model Selector |
-| [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) | Required by VNCCS Control Center for GGUF Qwen model loading |
-| [ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack) | Required for detector, SAM, and FaceDetailer paths used by VNCCS |
-| [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | Used by the default VNCCS upscaler mode |
-| [ComfyUI-Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3) | Used by clone-clothes preprocessing |
-| [quick-connections](https://github.com/niknah/quick-connections) | Convenience UI extension requested for this build |
-
-The old broad Easy Install / Pixaroma tutorial node pack is intentionally not installed by default. This build keeps the node set focused on what VNCCS needs.
+| [ComfyUI_VNCCS](https://github.com/AHEKOT/ComfyUI_VNCCS) | Main Visual Novel Character Creation Suite |
+| [ComfyUI_VNCCS_Utils](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) | Pose Studio, Visual Camera Control, QWEN Detailer, Model Manager, Model Selector |
+| [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) | GGUF Qwen model loading for VNCCS Control Center |
+| [ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack) | Detector, SAM, and FaceDetailer support for VNCCS workflows |
+| [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | VNCCS upscaling support |
+| [ComfyUI-Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3) | Clone-clothes preprocessing |
+| [quick-connections](https://github.com/niknah/quick-connections) | Faster node linking inside ComfyUI |
 
 ## VNCCS Workflow Entry Points
 
@@ -104,13 +102,12 @@ Create or clone character -> Generate clothes -> Generate emotions -> Use sprite
 
 VNCCS 3.0 uses **VNCCS Control Center**. Open a VNCCS workflow and use **Download ALL** to place the main models into the correct ComfyUI folders.
 
-The default generation path is Qwen Image Edit 2511 with GGUF model loading. Control Center currently manages:
+The main generation path uses Qwen Image Edit 2511 with GGUF model loading. Control Center manages:
 
 - Qwen Image Edit 2511 GGUF models: Q4, Q5, Q8.
 - QIE2511 text encoder and VAE.
 - Qwen Image Edit 2511 Lightning LoRA.
 - VNCCS Clothes Core LoRA.
-- VNCCS Emotion Core LoRA.
 - VNCCS Pose Studio LoRA.
 - 4x APISR upscaler.
 
@@ -129,7 +126,7 @@ After setup, launch ComfyUI with `Start ComfyUI.bat` or use the EZi Desktop laun
 
 ## Useful Add-ons
 
-The package still contains selected Easy Install helper tools:
+Additional helper tools are included for setup and maintenance:
 
 - Easy-Models-Linker for using an existing models folder via `extra_model_paths.yaml`.
 - Easy-System-Checker for hardware and software checks.
@@ -139,7 +136,7 @@ The package still contains selected Easy Install helper tools:
 - Torch-Pack for switching supported PyTorch/CUDA builds.
 - Update Easy-Install for refreshing helper files.
 
-Optional experimental add-ons such as Nunchaku, SageAttention, FlashAttention, InsightFace, and Trellis are still credited as inherited installer tooling, but they are not the default VNCCS path.
+Optional add-ons such as Nunchaku, SageAttention, FlashAttention, InsightFace, and Trellis are available for users who need them.
 
 ## Community And Support
 
@@ -160,7 +157,7 @@ VNCCS is maintained as an independent project. Support helps keep the character 
 
 ## Credits To The Installer Foundation
 
-This project is based on **ComfyUI-Easy-Install** by **Tavris1 / ivo**. The original installer work made the portable Windows ComfyUI foundation, EZi Desktop helper, update scripts, add-on tools, and dependency-management flow possible.
+VNCCS Easy Install is built on **ComfyUI-Easy-Install** by **Tavris1 / ivo**. Thanks to the original project for the portable Windows ComfyUI foundation, EZi Desktop helper, update scripts, add-on tools, and dependency-management flow.
 
 Original installer:
 
