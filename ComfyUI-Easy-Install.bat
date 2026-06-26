@@ -113,9 +113,10 @@ call :get_node https://github.com/AHEKOT/ComfyUI_VNCCS                    vnccs
 call :get_node https://github.com/AHEKOT/ComfyUI_VNCCS_Utils              vnccs-utils
 call :get_node https://github.com/city96/ComfyUI-GGUF                     ComfyUI-GGUF
 call :get_node https://github.com/ltdrdata/ComfyUI-Impact-Pack            ComfyUI-Impact-Pack
+call :get_node https://github.com/ltdrdata/ComfyUI-Impact-Subpack         ComfyUI-Impact-Subpack
 call :get_node https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler      seedvr2_videoupscaler
 call :get_node https://github.com/yolain/ComfyUI-Easy-Sam3                comfyui-easy-sam3
-call :get_node https://github.com/niknah/quick-connections                 quick-connections
+call :get_node https://github.com/niknah/quick-connections                quick-connections
 
 echo %green%::::::::::::::: %yellow%Installation/Updating SoX%green% :::::::::::::::%reset%
 echo.
