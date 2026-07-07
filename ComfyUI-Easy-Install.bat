@@ -1,7 +1,10 @@
 @echo off&&cd /D %~dp0
-set "CEI_Title=ComfyUI-Easy-Install by ivo v3.7.0"
+set "CEI_Title=ComfyUI-Easy-Install by ivo v3.10.0"
 Title %CEI_Title%
 :: Pixaroma Community Edition ::
+
+set "GIT_TERMINAL_PROMPT=0"
+set "GIT_ASKPASS=echo"
 
 :: Set Ignoring Large File Storage ::
 set GIT_LFS_SKIP_SMUDGE=1
@@ -12,7 +15,7 @@ set "UVargs=--no-cache --link-mode=copy"
 
 :: Add a path just in case ::
 for /f "delims=" %%G in ('cmd /c "where.exe git.exe 2>nul"') do (set "GIT_PATH=%%~dpG")
-set "path=%GIT_PATH%;%windir%\System32;%windir%\System32\WindowsPowerShell\v1.0;%localappdata%\Microsoft\WindowsApps
+set "path=%GIT_PATH%;%windir%\System32;%windir%\System32\WindowsPowerShell\v1.0;%localappdata%\Microsoft\WindowsApps;%path%"
 
 call :SET_COLORS
 call :NVIDIA_DRIVER_CHECK
@@ -25,8 +28,16 @@ if exist ComfyUI-Easy-Install if exist "ComfyUI-Easy-Install" (
 	goto :eof
 )
 
-:: Check for Existing Helper-CEI ::
-set "HLPR_NAME=Helper-CEI.zip"
+:: Check for Existing Config and Python payload ::
+set "CFG_DIR=config"
+if not exist "%CFG_DIR%\" (
+	echo %warning%WARNING:%reset% '%bold%%CFG_DIR%%reset%' folder not exists!
+	echo %green%Unzip the entire package and try again.%reset%
+	echo Press any key to Exit...&Pause>nul
+	goto :eof
+)
+
+set "HLPR_NAME=Python-Embeded.zip"
 if not exist "%HLPR_NAME%" (
 	echo %warning%WARNING:%reset% '%bold%%HLPR_NAME%%reset%' not exists!
 	echo %green%Unzip the entire package and try again.%reset%
@@ -86,18 +97,19 @@ call :install_comfyui
 echo %green%::::::::::::::: %yellow%Pre-installation of required modules%green% :::::::::::::::%reset%
 echo.
 REM .\python_embeded\python.exe -I -m uv pip install requests==2.31.0 urllib3==2.6.3 charset_normalizer==3.4.4
+.\python_embeded\python.exe -I -m uv pip install kornia==0.7.4 %UVargs%
+.\python_embeded\python.exe -I -m uv pip install scipy==1.17.1 %UVargs%
 .\python_embeded\python.exe -I -m uv pip install chardet==5.2.0 %UVargs%
 .\python_embeded\python.exe -I -m uv pip install scikit-build-core %UVargs%
 .\python_embeded\python.exe -I -m uv pip install onnxruntime-gpu %UVargs%
 .\python_embeded\python.exe -I -m uv pip install onnx %UVargs%
 .\python_embeded\python.exe -I -m uv pip install flet %UVargs%
-.\python_embeded\python.exe -I -m uv pip install pywebview %UVargs%
 .\python_embeded\python.exe -I -m uv pip install -r ".\ComfyUI\manager_requirements.txt" %UVargs%
 
 if "%CURRENT_CUDA%"=="12.8" (
-	.\python_embeded\python.exe -I -m uv pip install https://github.com/JamePeng/llama-cpp-python/releases/download/v0.3.33-cu128-Basic-win-20260315/llama_cpp_python-0.3.33+cu128.basic-cp312-cp312-win_amd64.whl %UVargs%
+    .\python_embeded\python.exe -I -m uv pip install https://github.com/JamePeng/llama-cpp-python/releases/download/v0.3.38-cu128-Basic-win-20260504/llama_cpp_python-0.3.38+cu128.basic-cp312-cp312-win_amd64.whl %UVargs%
 ) else (
-	.\python_embeded\python.exe -I -m uv pip install https://github.com/JamePeng/llama-cpp-python/releases/download/v0.3.33-cu130-Basic-win-20260315/llama_cpp_python-0.3.33+cu130.basic-cp312-cp312-win_amd64.whl %UVargs%
+    .\python_embeded\python.exe -I -m uv pip install https://github.com/JamePeng/llama-cpp-python/releases/download/v0.3.38-cu130-Basic-win-20260504/llama_cpp_python-0.3.38+cu130.basic-cp312-cp312-win_amd64.whl %UVargs%
 )
 
 :: Install working version of stringzilla (damn it) ::
@@ -118,17 +130,46 @@ call :get_node https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler      seedvr
 call :get_node https://github.com/yolain/ComfyUI-Easy-Sam3                comfyui-easy-sam3
 call :get_node https://github.com/niknah/quick-connections                quick-connections
 
-echo %green%::::::::::::::: %yellow%Installation/Updating SoX%green% :::::::::::::::%reset%
+:: Check if SoX is already installed - skip silently if found
+where sox.exe >nul 2>&1
+if not errorlevel 1 goto SkipSoX
+
 echo.
-winget.exe install --id ChrisBagwell.SoX -e --accept-source-agreements --accept-package-agreements --silent
+echo %green%::::::::::::::::::::: %yellow%Installing SoX%green% :::::::::::::::::::::%reset%
+echo.
+
+set "SOX_ROOT=%LocalAppData%\SoX"
+set "SOX_DIR=%SOX_ROOT%\sox-14.4.2"
+set "SOX_ZIP=%TEMP%\sox-14.4.2-win32.zip"
+
+curl.exe -L --progress-bar --ssl-no-revoke --retry 5 --retry-delay 2 -o "%SOX_ZIP%" "https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-win32.zip"
+if not exist "%SOX_ZIP%" (
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "try { Start-BitsTransfer -Source 'https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-win32.zip' -Destination '%SOX_ZIP%' -ErrorAction Stop } catch { exit 1 }"
+)
+
+if exist "%SOX_ZIP%" (
+    if not exist "%SOX_ROOT%" mkdir "%SOX_ROOT%"
+    tar.exe -xmf "%SOX_ZIP%" -C "%SOX_ROOT%"
+    del "%SOX_ZIP%"
+    
+    set "path=%path%;%SOX_DIR%"
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "$p=[Environment]::GetEnvironmentVariable('Path','User'); $d='%SOX_DIR%'; if(-not ($p -like \"*$d*\")){[Environment]::SetEnvironmentVariable('Path', $p+';'+$d, 'User')}"
+    echo %green%SoX installed successfully.%reset%
+) else (
+    echo %warning%WARNING:%reset% Could not download SoX. You can install it manually later from %yellow%https://sourceforge.net/projects/sox/%reset%
+)
+
+:SkipSoX
 cd .\
 echo.
 
+
 if not exist ".\ComfyUI\custom_nodes\.disabled" mkdir ".\ComfyUI\custom_nodes\.disabled"
 
-:: Extracting helper folders ::
+:: Extracting Python headers/libs and copying helper config ::
 cd ..\
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Microsoft.PowerShell.Archive\Expand-Archive -LiteralPath '%HLPR_NAME%' -DestinationPath '.' -Force"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Copy-Item -Path '%CFG_DIR%\*' -Destination 'ComfyUI-Easy-Install' -Recurse -Force"
 
 cd ComfyUI-Easy-Install
 
@@ -253,7 +294,7 @@ REM .\python.exe -I -m pip config set global.trusted-host "pypi.org files.python
 if "%CURRENT_CUDA%"=="12.8" (
 	.\python.exe -I -m pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128 %PIPargs%
 ) else (
-	.\python.exe -I -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cu130 %PIPargs%
+	.\python.exe -I -m pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 --index-url https://download.pytorch.org/whl/cu130 %PIPargs%
 )
 
 .\python.exe -I -m uv pip install pygit2 %UVargs%

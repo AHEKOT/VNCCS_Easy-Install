@@ -1,0 +1,209 @@
+{
+  "id": "561d9481-4eb7-4fb4-b22f-3044d70007dd",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 0,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "MarkdownNote",
+      "pos": [
+        -996.5471242939764,
+        -62.00405314869184
+      ],
+      "size": [
+        446.30687061823414,
+        1754.2425559277185
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# 📘 ComfyUI Definitions (Easy Guide)\n\n▶ This note explains common ComfyUI terms in simple language for new users.\n\n---\n\n## 🧠 Model (General)\n\n▶ A **model** is what ComfyUI uses to generate images or video.  \n▶ It has learned patterns from training data and uses your prompt to create results.\n\n📌 In ComfyUI, “model” can mean different things depending on how it is loaded.\n\n---\n\n## 🧠 Checkpoint (All-in-One Model)\n\n▶ A **checkpoint** is a model file that usually contains:\n- the diffusion model\n- text encoder(s)\n- and sometimes a VAE\n\n▶ Checkpoints are easy to use because everything is bundled together.  \n▶ They are loaded with **Load Checkpoint** nodes.\n\n---\n\n## 🧠 Diffusion Model (Component)\n\n▶ A **diffusion model** is the part that actually creates the image.  \n▶ It works by slowly turning noise into a picture.\n\n▶ Some workflows use diffusion models **by themselves**, instead of full checkpoints.  \n▶ In that case, text encoders and VAEs are loaded separately.\n\n---\n\n## 🧾 Text Encoder\n\n▶ A **text encoder** converts your text prompt into data the model understands.  \n▶ It turns words into numbers that guide the image generation.\n\n▶ Newer ComfyUI versions use **text_encoders**.  \n▶ Older versions may call this **CLIP**.\n\n---\n\n## 🧪 VAE (Variational Autoencoder)\n\n▶ A **VAE** converts the model’s internal data into a visible image.  \n▶ It affects colors, contrast, and overall image look.\n\n▶ Some checkpoints include a VAE.  \n▶ Other workflows load a VAE separately to change the final result.\n\n---\n\n## 🎨 LoRA (Low-Rank Adapter)\n\n▶ A **LoRA** is a small add-on model.  \n▶ It modifies the style, subject, or behavior of a main model.\n\n▶ LoRAs do **not** work by themselves.  \n▶ They must be used together with a checkpoint or diffusion model.\n\n---\n\n## 🖼 txt2img (Text to Image)\n\n▶ **txt2img** means creating an image using only a text prompt.  \n▶ The model starts from noise and generates an image step by step.\n\n▶ This is the most common way to begin using ComfyUI.\n\n---\n\n## 🖼 img2img (Image to Image)\n\n▶ **img2img** means using an existing image as input.  \n▶ The model changes or improves the image based on your prompt.\n\n▶ Useful for edits, style changes, and refining images.\n\n---\n\n## 🎞 txt2video (Text to Video)\n\n▶ **txt2video** creates video frames from a text prompt.  \n▶ It works like txt2img, but generates many images over time.\n\n▶ This usually requires more VRAM and special workflows.\n\n---\n\n## 🧩 Latent\n\n▶ A **latent** is the hidden data the model works with internally.  \n▶ Images are generated in latent form before being decoded by a VAE.\n\n▶ You normally do not see latents unless a workflow exposes them.\n\n---\n\n## 🔁 Sampler\n\n▶ A **sampler** controls how the image is generated step by step.  \n▶ Different samplers affect sharpness, noise, and style.\n\n▶ Samplers are selected in nodes like **KSampler**.\n\n---\n\n## 🔢 Steps\n\n▶ **Steps** control how many refinement passes the model makes.  \n▶ More steps can increase detail but take longer.\n\n▶ Too many steps can reduce image quality.\n\n---\n\n## ⚖ CFG (Guidance Scale)\n\n▶ **CFG** controls how strongly the model follows your prompt.  \n▶ Lower values = more creative freedom  \n▶ Higher values = more literal results\n\n---\n\n## 🧠 Workflow\n\n▶ A **workflow** is the node graph in ComfyUI.  \n▶ It defines how models, prompts, and settings connect together.\n\n▶ Workflows can be saved, shared, and reused.\n\n---\n\n## 📌 Final Tip\n\n▶ If these terms feel confusing at first, that’s normal.  \n▶ ComfyUI is powerful, and understanding comes step by step.\n\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1,
+      "type": "MarkdownNote",
+      "pos": [
+        -1390.941095189642,
+        -62.00405314869184
+      ],
+      "size": [
+        362.55446542066863,
+        626.9912220235876
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# ❗ Help and Resources\n\n---\n\n## ▶ [Pixaroma – YouTube Channel](https://www.youtube.com/@pixaroma)\n\n▶ Tutorials, workflows, and ComfyUI guides by Pixaroma.\n\n---\n\n## 💬 [Pixaroma – Discord Server](https://discord.com/invite/gggpkVgBf3)\n\n📌 After joining:\n- Workflows are in **pixaroma-workflows**\n- ComfyUI discussion is in **comfyui** channel and forum sections\n\n---\n\n## ⚙ [ComfyUI Easy Installer – GitHub](https://github.com/Tavris1/ComfyUI-Easy-Install)\n\n📦 Easy installer for ComfyUI with extra tools and helpers. \n\n---\n\n## 🖥 Official ComfyUI Resources\n\n▶ Official links maintained by the ComfyUI team:\n\n- ▶ **[ComfyUI – Official YouTube Channel](https://www.youtube.com/@comfyorg)**  \n  Official videos, announcements, and updates.\n\n- 🌐 **[ComfyUI – Official Website](https://www.comfy.org/)**  \n  Main ComfyUI homepage.\n\n- 📝 **[ComfyUI – Official Blog](https://blog.comfy.org/)**  \n  News, updates, and development posts.\n\n- 📖 **[ComfyUI – Official Documentation](https://docs.comfy.org/)**  \n  Guides and references for using ComfyUI.\n\n- 💾 **[ComfyUI – GitHub Repository](https://github.com/comfyanonymous/ComfyUI)**  \n  Source code and official updates.\n\n---\n\n## 👥 Unofficial ComfyUI Communities\n\n- 💬 **[ComfyUI Reddit](https://www.reddit.com/r/comfyui/)**\n- 💬 **[ComfyUI Facebook Group](https://www.facebook.com/groups/comfyui)**\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "MarkdownNote",
+      "pos": [
+        -518.400748200745,
+        -62.00405314869184
+      ],
+      "size": [
+        623.0255203575427,
+        1951.8055602477168
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# ⚙ Performance & Low VRAM (ComfyUI)\n\n▶ This note explains how performance works in ComfyUI, why VRAM matters, and how to run faster on lower-end systems.\n\n---\n\n## 🧠 Why Performance Matters\n\n▶ ComfyUI does most of its work on the **GPU**, not the CPU.  \n▶ Models, prompts, and intermediate data are stored in **VRAM** while generating.\n\n📌 If VRAM runs out, ComfyUI may:\n- slow down\n- fail to run\n- show CUDA out of memory errors\n\n---\n\n## 🎮 GPU vs CPU (Very Important)\n\n▶ The **GPU** is the most important part for ComfyUI performance.  \n▶ The **CPU** mostly helps with loading and basic tasks.\n\n📌 A fast GPU matters much more than a fast CPU for generation speed.\n\n---\n\n## 🟢 Why Nvidia GPUs Are the Best Option\n\n▶ ComfyUI is built on tools that work best with **Nvidia GPUs**.\n\n✔ Nvidia uses **CUDA**, which is well supported  \n✔ Better optimization for AI workloads  \n✔ More stable performance  \n✔ Widely tested by the community\n\n📌 This is why most ComfyUI guides recommend Nvidia cards.\n\n---\n\n## 💾 What VRAM Does\n\n▶ **VRAM** is the memory on your GPU.  \n▶ It stores:\n- models\n- text encoders\n- intermediate image data\n\n📌 More VRAM allows:\n- larger images\n- bigger models\n- higher batch sizes\n- fewer crashes\n\n📌 Less VRAM requires careful settings.\n\n---\n\n## ⚠ Common VRAM Limits (General)\n\n▶ These are rough guidelines:\n\n- 4–6 GB VRAM → very limited, careful settings needed  \n- 8 GB VRAM → workable with optimization  \n- 12+ GB VRAM → comfortable for most workflows  \n\n📌 Optimization matters more than raw power.\n\n---\n\n## ⚡ Biggest Performance Killers\n\nAvoid these when using low VRAM:\n\n❌ Very high resolution  \n❌ High batch size  \n❌ Too many steps  \n❌ Many heavy nodes at once  \n❌ Running other GPU-heavy apps\n\n---\n\n## ⚙ How to Improve Performance (Most Effective)\n\n### 📏 Lower Resolution\n▶ Start small, then upscale later.  \n▶ Resolution has the biggest VRAM impact.\n\n---\n\n### 🔢 Reduce Steps\n▶ More steps = more time and memory.  \n▶ Medium values often give the best balance.\n\n---\n\n### 📦 Batch Size = 1\n▶ Batch size multiplies VRAM usage.  \n▶ Keep it at **1** on low-VRAM systems.\n\n---\n\n### 🎨 Be Careful With LoRAs\n▶ Each LoRA uses extra memory.  \n▶ Use only what you need.\n\n---\n\n### 🧹 Restart ComfyUI Often\n▶ Restarting frees VRAM.  \n▶ Especially useful after errors.\n\n---\n\n## 🧪 Low VRAM Strategies\n\n▶ These techniques help weaker GPUs:\n\n✔ Generate at low resolution, then upscale  \n✔ Use simpler workflows  \n✔ Avoid unnecessary nodes  \n✔ Change one setting at a time  \n✔ Restart if VRAM errors appear\n\n📌 Low VRAM does NOT mean you cannot use ComfyUI - it just means slower and smarter.\n\n---\n\n## 🧠 Other Things That Affect Speed\n\n▶ Storage speed helps with loading:\n- SSD is much faster than HDD\n\n▶ RAM helps with stability:\n- More system RAM reduces slowdowns\n\n▶ Closing background apps frees GPU memory.\n\n---\n\n## 📌 Final Advice\n\n▶ Performance is a balance between:\n- quality\n- resolution\n- speed\n- available VRAM\n\n▶ Start simple, then increase quality step by step.\n\n▶ Nvidia + good settings = best experience.\n\n\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "MarkdownNote",
+      "pos": [
+        136.46427763179474,
+        -62.00405314869184
+      ],
+      "size": [
+        592.8719212945946,
+        2214.0909192534573
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# ⚠ Common Errors & Fixes (ComfyUI)\n\n▶ This note explains common problems in ComfyUI and how to fix them.\n\n---\n\n## 🔴 Red Nodes / Missing Models\n\n▶ A red node usually means **ComfyUI cannot find a model**.\n\n✔ Check the model is in the correct folder  \n✔ Make sure the file name did not change  \n✔ Press **R** to refresh models  \n✔ Restart ComfyUI if needed\n\n---\n\n## 📂 Model Does Not Appear in the List\n\n▶ If a model is not visible in a dropdown:\n\n✔ Confirm it is inside `models` and the correct subfolder  \n✔ Folder names must be **exactly correct**  \n✔ Press **R** to refresh  \n✔ Restart ComfyUI\n\n---\n\n## 💥 CUDA Out of Memory (VRAM Error)\n\n▶ This means your GPU does not have enough VRAM.\n\n✔ Lower image resolution  \n✔ Reduce batch size  \n✔ Lower number of steps  \n✔ Close other GPU-heavy programs  \n✔ Restart ComfyUI to clear VRAM\n\n---\n\n## ▶ Nothing Happens When You Click Run\n\n▶ The workflow is incomplete or blocked.\n\n✔ Check for red nodes  \n✔ Make sure all required inputs are connected  \n✔ Ensure a **Save Image** node is connected  \n✔ Check the console for error messages\n\n📌 In older versions this button was called **Queue**.  \n📌 In newer versions it appears as **Run** and may be part of a movable toolbar.\n\n---\n\n## 🧩 Workflow Will Not Load\n\n▶ This usually happens when required custom nodes are missing.\n\n✔ Install the required custom nodes  \n✔ Restart ComfyUI after installing nodes  \n✔ Update nodes if they are outdated\n\n---\n\n## 📦 Custom Node Errors\n\n▶ Custom nodes must be installed correctly.\n\n✔ Nodes go in the `custom_nodes` folder  \n✔ Restart ComfyUI after installing  \n✔ Some nodes require extra dependencies  \n✔ Always read the node’s install instructions\n\n---\n\n## 🧠 Wrong or Strange Results\n\n▶ Images look broken, washed out, or incorrect.\n\n✔ Try a different VAE  \n✔ Lower CFG  \n✔ Reduce steps  \n✔ Check LoRA strength  \n✔ Confirm the model type matches the workflow\n\n---\n\n## 🖼 Image Saves But Is Black or Empty\n\n▶ This is usually a decode or VAE issue.\n\n✔ Make sure a Decode node is connected  \n✔ Load a VAE manually  \n✔ Confirm latents are connected correctly\n\n---\n\n## 🧪 ControlNet Not Working\n\n▶ ControlNet requires extra models and correct connections.\n\n✔ Make sure the ControlNet model is installed  \n✔ Confirm the input image is connected  \n✔ Check ControlNet strength values  \n✔ Press **R** or restart ComfyUI\n\n---\n\n## 🔄 Changes Do Not Apply\n\n▶ New models or nodes are not detected.\n\n✔ Press **R** to refresh  \n✔ Restart ComfyUI  \n✔ Reload the workflow\n\n---\n\n## ⚠ General Fix Order (Try This First)\n\n1. Press **R**\n2. Check folders and paths\n3. Restart ComfyUI\n4. Reload the workflow\n5. Reduce settings if VRAM errors appear\n\n---\n## 🐞 Updates, Bugs, and Issues\n\n▶ Sometimes updates can introduce new bugs.  \n▶ If a problem appears right after an update, it may not be caused by your setup.\n\n---\n\n### 🧠 If the Problem Is ComfyUI Itself\n\n▶ Issues affecting core ComfyUI behavior should be checked or reported on the **official ComfyUI GitHub** [HERE](https://github.com/comfyanonymous/ComfyUI/issues)\n\n📌 Before reporting:\n- Check if the issue already exists\n- Read recent issues after updates\n\n---\n\n### 🧩 If the Problem Is a Custom Node\n\n▶ If the error only happens when using a **specific custom node**, the issue is usually with that node.\n\n📌 In this case:\n- Find the GitHub page for that custom node\n- Check its **Issues** section\n- Report the problem there if needed\n\n▶ Reporting issues to the correct place helps fixes happen faster.\n\n---\n\n## 📌 Final Tip\n\n▶ Most errors come from:\n- missing models\n- wrong folders\n- not restarting after changes\n\n▶ Take it step by step - ComfyUI rewards patience.\n\n\n---\n\n## 💬 [As questions on Pixaroma – Discord Server](https://discord.com/invite/gggpkVgBf3)\n\n📌 After joining:\n- Workflows are in **pixaroma-workflows**\n- ComfyUI discussion is in **comfyui** channel and forum sections\n\n### !!! When you ask for help, include screenshots of your workflow. Tell us what video card you have, how much vram and system Ram, and which operating system you are using. Also explain what you already tried and what did not work. This helps the Discord community assist you faster.\n\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 2,
+      "type": "MarkdownNote",
+      "pos": [
+        761.1757044013864,
+        -62.00405314869184
+      ],
+      "size": [
+        505.4509633313671,
+        1571.0683610791903
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# 📂 Model Locations (ComfyUI)\n\n▶ This note explains where ComfyUI models are stored and how to organize them correctly.\n\n---\n\n## ▶ Overview\n\n▶ All models used by ComfyUI are located inside the **models** directory.  \n▶ The exact location depends on where **you installed ComfyUI**.\n\n📌 Base path example: `..\\ComfyUI\\models`  \n📌 If ComfyUI is installed on another drive or folder, the path will match that location.\n\n---\n\n## 🧠 Checkpoints vs Diffusion Models (Important)\n\n### 🧠 Checkpoints (All-in-One Models)\n📂 Path: `..\\ComfyUI\\models\\checkpoints`\n\n- Models that include **diffusion + text encoder + VAE** in one file\n- Loaded using **Load Checkpoint** nodes\n- Common for sd15, sdxl, AIO workflows\n\n---\n\n### 🧠 Diffusion Models (Component Models)\n📂 Path: `..\\ComfyUI\\models\\diffusion_models`\n\n- Diffusion-only models **without integrated text encoder or VAE**\n- Used in workflows that load components separately\n- Replaces the older `models\\unet` folder\n\n---\n\n## 🧾 Text Encoders\n📂 Path: `..\\ComfyUI\\models\\text_encoders`\n\n- Models used to convert text prompts into embeddings\n- This is the **current standard folder**\n- Older versions of ComfyUI used `models\\clip`  \n  (both serve the same purpose depending on ComfyUI version)\n\n---\n\n## 🧪 VAE (Variational Autoencoder)\n📂 Path: `..\\ComfyUI\\models\\vae`\n\n- Controls color, contrast, and image decoding\n- Can be loaded separately to override a checkpoint VAE\n\n---\n\n## 🎨 LoRAs\n📂 Path: `..\\ComfyUI\\models\\loras`\n\n- Style, character, and effect modifiers\n- Loaded using LoRA loader nodes\n\n---\n\n## 🖼 ControlNet Models\n📂 Path: `..\\ComfyUI\\models\\controlnet`\n\n- Used for pose, depth, canny, lineart, and similar controls\n\n---\n\n## 📐 Upscale Models\n📂 Path: `..\\ComfyUI\\models\\upscale_models`\n\n- Used for image upscaling and enhancement\n\n---\n\n## 🗂 Optional Folder Organization (Recommended)\n\n▶ You can create **subfolders inside any model folder**.  \n▶ ComfyUI will automatically scan and load models from all subfolders.\n\n📌 Organize by **model family or architecture**, for example:\n- `sd15`\n- `flux`\n- `sdxl`\n- `qwen`\n- `wan`\n\n📌 Example organization (conceptual):\n- `checkpoints/sd15`\n- `diffusion_models/flux`\n- `text_encoders/sd15`\n- `loras/sd15`\n- `vae/sdxl`\n\n▶ This helps keep large model collections clean and manageable.\n\n---\n\n## ⚠ Refresh & Reload\n\n- Press **R** in the ComfyUI interface to refresh the model list\n- Restart ComfyUI if models still do not appear\n- Red loader nodes usually indicate a **missing or misplaced model**\n\n---\n\n## ▶ Quick Checklist\n\n- ✔ Models are inside `..\\ComfyUI\\models`\n- ✔ Correct folder for model type\n- ✔ Optional organization by model family\n- ✔ Press **R** or restart ComfyUI\n\n---\n\n## 🧱 Portable Version Reminder\n\n📌 If you are using **ComfyUI Portable**, the `models` folder is always inside your ComfyUI directory, wherever you placed it.\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 7,
+      "type": "MarkdownNote",
+      "pos": [
+        1298.4661732077507,
+        -62.00405314869184
+      ],
+      "size": [
+        514.6036171262801,
+        1621.678984206475
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# 📦 Custom Nodes (ComfyUI)\n\n▶ This note explains what custom nodes are, how they work, and what to expect when using them.\n\n---\n\n## 🧩 What Are Custom Nodes\n\n▶ **Custom nodes** are extra features added to ComfyUI by the community.  \n▶ They are not part of the core ComfyUI installation.\n\n📌 Custom nodes can add:\n- new workflows\n- new tools\n- new model support\n- automation helpers\n\n---\n\n## 🧠 Important to Understand\n\n▶ Custom nodes are:\n- created by independent developers\n- updated at different speeds\n- sometimes experimental\n\n📌 This means they can break more easily than core ComfyUI features.\n\n---\n\n## 📂 Where Custom Nodes Are Installed\n\n▶ Custom nodes are installed inside the **custom_nodes** folder.\n\n📌 If a node is not inside this folder, ComfyUI will not load it.\n\n▶ After installing or updating custom nodes, **ComfyUI must be restarted**.\n\n---\n\n## 🔄 Why Restarts Are Required\n\n▶ Custom nodes are loaded when ComfyUI starts.  \n▶ Pressing **R** refreshes models, but does **not** reload custom nodes.\n\n📌 Always restart ComfyUI after:\n- installing a new custom node\n- updating a custom node\n- removing a custom node\n\n---\n\n## ⚠ Updates Can Break Custom Nodes\n\n▶ Sometimes updating ComfyUI can introduce changes.  \n▶ Custom nodes may not be updated yet to match those changes.\n\n📌 If something breaks after an update:\n- it may NOT be your fault\n- it may NOT be a ComfyUI bug\n\n---\n\n## 🐞 Where to Report Problems\n\n### 🧠 If the Problem Is ComfyUI Itself\n\n▶ If the issue affects core ComfyUI behavior:\n- loading\n- running\n- basic nodes\n\n📌 Check or report the issue on the **official ComfyUI GitHub Issues page**.\n\n---\n\n### 🧩 If the Problem Is a Custom Node\n\n▶ If the error only happens when using a specific custom node:\n- the issue is usually with that node\n\n📌 In this case:\n- find the GitHub page for that custom node\n- check its **Issues** section\n- report the problem there\n\n▶ Reporting issues in the correct place helps fixes happen faster.\n\n---\n\n## 🧪 How to Troubleshoot Custom Node Issues\n\n▶ Try this order:\n\n1. Restart ComfyUI  \n2. Check if the node is updated  \n3. Test the workflow without the custom node  \n4. Read the error message in the console  \n5. Check the node’s GitHub issues\n\n---\n\n## ⚠ Common Beginner Mistakes\n\n❌ Forgetting to restart after installing nodes  \n❌ Updating everything at once  \n❌ Mixing very old nodes with new ComfyUI versions  \n❌ Assuming all custom nodes are stable  \n\n---\n\n## 📌 Best Practices\n\n✔ Add custom nodes slowly  \n✔ Test workflows after changes  \n✔ Keep backups of working workflows  \n✔ Avoid updating right before important work  \n\n---\n\n## 🧠 Final Tip\n\n▶ Custom nodes are powerful, but they come with risk.  \n▶ Stability improves when you update carefully and understand what you install.\n\n▶ Treat custom nodes as **optional enhancements**, not requirements.\n\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 8,
+      "type": "MarkdownNote",
+      "pos": [
+        1844.9092958090278,
+        -62.00405314869184
+      ],
+      "size": [
+        570.2107096276989,
+        1618.589607012297
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "👑 Pixaroma - Help",
+      "properties": {},
+      "widgets_values": [
+        "# 🔄 Updating ComfyUI (Easy Install)\n\n▶ This note explains how to update ComfyUI when using the **Easy Install** setup, and what each `.bat` file does.\n\n---\n\n## 📂 Easy Install Folder Overview\n\n▶ In the Easy Install folder you will usually see:\n- the **ComfyUI** folder\n- the **python_embedded** folder\n- several `.bat` files\n\n📌 These `.bat` files are helper scripts to make updating easier.\n\n---\n\n## ▶ Start ComfyUI.bat\n\n▶ **Start ComfyUI.bat** is used to **launch ComfyUI**.\n\n✔ Starts ComfyUI using the embedded Python  \n✔ Uses the correct environment automatically  \n✔ Safe to use anytime\n\n📌 This file does **NOT** update anything.\n\n---\n\n## 🔄 Update ComfyUI.bat\n\n▶ **Update ComfyUI.bat** updates **only the core ComfyUI files**.\n\n✔ Updates ComfyUI itself  \n✔ Does NOT update custom nodes  \n✔ Does NOT update Easy Install\n\n📌 Use this when:\n- ComfyUI has a bug fix\n- You want core improvements\n- Custom nodes are already working fine\n\n---\n\n## 🔄 Update ComfyUI and Nodes.bat\n\n▶ **Update ComfyUI and Nodes.bat** updates:\n- core ComfyUI\n- installed custom nodes\n\n✔ Most complete update option  \n✔ Useful when workflows require newer nodes\n\n⚠ This can sometimes cause:\n- custom nodes to break\n- workflows to stop working\n\n📌 Use this when:\n- a workflow requires updated nodes\n- you understand updates may cause issues\n\n---\n\n## 🔄 Update Easy-Install.bat\n\n▶ **Update Easy-Install.bat** updates the **Easy Install helper system itself**.\n\n✔ Updates installer scripts  \n✔ Updates helper logic  \n✔ Does NOT directly update ComfyUI models\n\n📌 Use this when:\n- Easy Install adds new features\n- installer behavior changes\n- you are told to update Easy Install\n\n---\n\n## 🧠 Safe Update Order (Recommended)\n\n▶ To reduce problems, update in this order:\n\n1. Close ComfyUI  \n2. Run **Update ComfyUI.bat**  \n3. Test ComfyUI  \n4. Only then run **Update ComfyUI and Nodes.bat** if needed  \n5. Restart ComfyUI\n\n📌 Avoid updating everything at once unless required.\n\n---\n\n## ⚠ Important Update Tips\n\n✔ Always close ComfyUI before updating  \n✔ Restart ComfyUI after updates  \n✔ Press **R** to refresh models (not nodes)  \n✔ Keep working workflows backed up  \n✔ Updates can introduce new bugs\n\n---\n\n## 🐞 If Something Breaks After Updating\n\n▶ If ComfyUI itself breaks:\n- check the official ComfyUI GitHub issues\n\n▶ If a specific custom node breaks:\n- check that node’s GitHub issues page\n\n📌 Many update issues are temporary and get fixed quickly.\n\n---\n\n## 📌 Final Advice\n\n▶ If everything works, you do **not** need to update immediately.  \n▶ Update when:\n- you need a fix\n- you need a feature\n- a workflow requires it\n\n▶ Stability is more important than being on the latest version.\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.4864007739977917,
+      "offset": [
+        1667.700449271533,
+        328.225291875295
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.34.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
