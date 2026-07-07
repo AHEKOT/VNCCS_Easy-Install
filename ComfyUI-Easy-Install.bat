@@ -168,8 +168,9 @@ if not exist ".\ComfyUI\custom_nodes\.disabled" mkdir ".\ComfyUI\custom_nodes\.d
 
 :: Extracting Python headers/libs and copying helper config ::
 cd ..\
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Microsoft.PowerShell.Archive\Expand-Archive -LiteralPath '%HLPR_NAME%' -DestinationPath '.' -Force"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Copy-Item -Path '%CFG_DIR%\*' -Destination 'ComfyUI-Easy-Install' -Recurse -Force"
+tar.exe -xf "%HLPR_NAME%" -C "."
+call "%CFG_DIR%\update\update_vnccs_workflows.bat" "%CFG_DIR%"
+xcopy "%CFG_DIR%\*" "ComfyUI-Easy-Install\" /E /I /Y /H >nul
 
 cd ComfyUI-Easy-Install
 

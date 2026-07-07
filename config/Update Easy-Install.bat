@@ -65,7 +65,8 @@ if errorlevel 1 (
     echo Press any key to Exit...&Pause>nul
     exit /b 1
 )
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Copy-Item -Path '%CFG_TMP%\config\*' -Destination '.' -Recurse -Force"
+call "%CFG_TMP%\config\update\update_vnccs_workflows.bat" "%CFG_TMP%\config"
+xcopy "%CFG_TMP%\config\*" ".\" /E /I /Y /H >nul
 
 if exist "ComfyUI-Easy-Install.zip" del "ComfyUI-Easy-Install.zip"
 if exist "%CFG_TMP%" rmdir /s /q "%CFG_TMP%" >nul 2>&1
