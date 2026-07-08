@@ -103,7 +103,6 @@ REM .\python_embeded\python.exe -I -m uv pip install requests==2.31.0 urllib3==2
 .\python_embeded\python.exe -I -m uv pip install scikit-build-core %UVargs%
 .\python_embeded\python.exe -I -m uv pip install onnxruntime-gpu %UVargs%
 .\python_embeded\python.exe -I -m uv pip install onnx %UVargs%
-.\python_embeded\python.exe -I -m uv pip install flet %UVargs%
 .\python_embeded\python.exe -I -m uv pip install -r ".\ComfyUI\manager_requirements.txt" %UVargs%
 
 if "%CURRENT_CUDA%"=="12.8" (
@@ -181,8 +180,6 @@ if "%CURRENT_CUDA%"=="12.8" (
 	.\python_embeded\python.exe -I -m pip install --upgrade --force-reinstall "triton-windows<3.6" %PIPargs%
 )
 
-
-.\python_embeded\python.exe -I -m pip install --upgrade --force-reinstall "triton-windows<3.6" %PIPargs%
 :: Postinstall
 .\python_embeded\python.exe -I -m uv pip uninstall pydantic pydantic-core
 .\python_embeded\python.exe -I -m uv pip install pydantic %UVargs%

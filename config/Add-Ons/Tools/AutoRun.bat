@@ -77,7 +77,7 @@ if exist "%SOX_ZIP%" (
 cd .\
 echo.
 
-:: Reset numpy to v1.26.4 ::
+:: Keep NumPy 1.x for legacy binary nodes while satisfying ComfyUI/Easy-Sam3 requirements ::
 for /f "tokens=*" %%i in ('..\..\python_embeded\python.exe -c "import numpy; print(numpy.__version__)"') do set NUMPY_VERSION=%%i
 
 if not "%NUMPY_VERSION%"=="1.26.4" (

@@ -24,7 +24,7 @@ Echo %green%:::::::::::::: Updating All Nodes ::::::::::::::%reset%
 Echo.
 %PYTHON_EXE% -I %DIR_LVL%ComfyUI\custom_nodes\ComfyUI-Manager\cm-cli.py update all
 
-:: Restoring Numpy 1.26.4 ::
+:: Keep NumPy 1.x for legacy binary nodes while satisfying ComfyUI/Easy-Sam3 requirements ::
 %PYTHON_EXE% -c "import numpy, sys; sys.exit(0 if numpy.__version__ == '1.26.4' else 1)" 2>nul || %PYTHON_EXE% -I -m pip install --force-reinstall numpy==1.26.4 --no-deps --no-warn-script-location
 
 :: Final Messages ::

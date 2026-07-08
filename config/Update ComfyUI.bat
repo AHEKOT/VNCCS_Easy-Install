@@ -16,7 +16,7 @@ cd %DIR_LVL%ComfyUI&&git.exe checkout master -q&&cd %~dp0
 
 cd %DIR_LVL%update&&call update_comfyui_stable.bat nopause&&cd %~dp0
 
-:: Restoring Numpy 1.26.4 ::
+:: Keep NumPy 1.x for legacy binary nodes while satisfying ComfyUI/Easy-Sam3 requirements ::
 %PYTHON_EXE% -c "import numpy, sys; sys.exit(0 if numpy.__version__ == '1.26.4' else 1)" 2>nul || %PYTHON_EXE% -I -m pip install --force-reinstall numpy==1.26.4 --no-deps --no-warn-script-location
 
 :: Final Messages ::
