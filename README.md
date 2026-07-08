@@ -85,7 +85,6 @@ Back this folder up regularly. It is your character library.
 | [ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager) | Node management and update support |
 | Embedded Python 3.12.10 | Portable Python runtime |
 | Git | Downloads and updates |
-| EZi Desktop helper | Launching ComfyUI and opening common tools |
 
 ## VNCCS Tools And Nodes
 
@@ -139,7 +138,7 @@ Character Cloner and the clothing wizard can also use Qwen2.5-VL helper GGUF fil
 5. Avoid spaces and special characters in the install path.
 6. Keep NVIDIA drivers up to date.
 
-After setup, launch ComfyUI with `Start ComfyUI.bat` or use the EZi Desktop launcher.
+After setup, launch ComfyUI with `Start ComfyUI.bat`.
 
 ## Useful Add-ons
 
@@ -162,7 +161,7 @@ Optional add-ons such as Nunchaku, SageAttention, FlashAttention, InsightFace, a
 
 ## Credits To The Installer Foundation
 
-VNCCS Easy Install is built on **ComfyUI-Easy-Install** by **Tavris1 / ivo**. Thanks to the original project for the portable Windows ComfyUI foundation, EZi Desktop helper, update scripts, add-on tools, and dependency-management flow.
+VNCCS Easy Install is built on **ComfyUI-Easy-Install** by **Tavris1 / ivo**. Thanks to the original project for the portable Windows ComfyUI foundation, update scripts, add-on tools, and dependency-management flow.
 
 Original installer:
 

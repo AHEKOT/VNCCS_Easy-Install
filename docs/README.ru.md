@@ -131,7 +131,7 @@ Character Cloner и clothing wizard также могут использоват
 5. Лучше избегать пробелов и спецсимволов в пути.
 6. Обнови NVIDIA-драйверы.
 
-После установки запускай ComfyUI через `Start ComfyUI.bat` или EZi Desktop launcher.
+После установки запускай ComfyUI через `Start ComfyUI.bat`.
 
 ## Полезные Инструменты
 
@@ -152,7 +152,7 @@ Character Cloner и clothing wizard также могут использоват
 
 ## Credits: Оригинальный Инсталлер
 
-VNCCS Easy Install построен на **ComfyUI-Easy-Install** от **Tavris1 / ivo**. Спасибо оригинальному проекту за портативную Windows-основу ComfyUI, EZi Desktop, update-скрипты, add-on инструменты и общий dependency-management flow.
+VNCCS Easy Install построен на **ComfyUI-Easy-Install** от **Tavris1 / ivo**. Спасибо оригинальному проекту за портативную Windows-основу ComfyUI, update-скрипты, add-on инструменты и общий dependency-management flow.
 
 - Репозиторий: [Tavris1/ComfyUI-Easy-Install](https://github.com/Tavris1/ComfyUI-Easy-Install)
 - Релизы: [ComfyUI-Easy-Install releases](https://github.com/Tavris1/ComfyUI-Easy-Install/releases)
